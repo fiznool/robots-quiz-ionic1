@@ -1,0 +1,17 @@
+<ion-view>
+  <ion-nav-title>Robots</ion-nav-title>
+  <ion-content>
+    <div class="list">
+      <a ng-repeat="robot in robots" ui-sref="robotState({ id: robot.objectId })" class="item item-icon-right">
+        <img ng-src="{{ robot.picture }}">
+        <h2>{{ robot.name }}</h2>
+        <p>{{ robot.emailAddress }}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </a>
+    </div>
+    <ion-infinite-scroll
+      ng-if="hasMoreRobots"
+      on-infinite="loadNext"
+      immediate-check="false"></ion-infinite-scroll>
+  </ion-content>
+</ion-view>
