@@ -11,8 +11,8 @@ angular
       })
       .state('robotState', {
         url: '/robots/:id',
-        templateUrl: 'robot.html',
-        controller: 'Robot'
+        templateUrl: 'html/robot.html',
+        controller: 'RobotController'
       });
 
     $urlRouterProvider.otherwise('robots');
