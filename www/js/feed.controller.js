@@ -2,12 +2,16 @@
 
 angular
   .module('robots')
-  .controller('FeedController', function(RobotsFactory, $scope) {
+  .controller('FeedController', function(RobotsFactory, $scope, $ionicLoading) {
     $scope.load = function() {
+      $ionicLoading.show({
+        template: '<ion-spinner icon="lines"></ion-spinner>'
+      });
       RobotsFactory
         .getRobots()
         .then(function(response) {
           robotsLoaded(response);
+          $ionicLoading.hide();
         });
     };
 
