@@ -9823,3 +9823,9 @@ a.button {
 
 .platform-android .icon.ion-chevron-right.icon-accessory {
   display: none; }
+
+.loading .spinner {
+  fill: #eee;
+  stroke: #eee;
+  display: block;
+  height: 28px; }
